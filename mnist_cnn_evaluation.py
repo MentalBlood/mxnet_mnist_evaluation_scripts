@@ -1,5 +1,3 @@
-import json
-import base64
 import argparse
 import numpy as np
 import cv2
