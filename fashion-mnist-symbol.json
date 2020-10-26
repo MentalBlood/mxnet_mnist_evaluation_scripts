@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "hybridsequential16_conv0_weight", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(8, 0, 4, 4)", 
+        "__storage_type__": "0", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "hybridsequential16_conv0_bias", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__init__": "zeros", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(8,)", 
+        "__storage_type__": "0", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "hybridsequential16_conv0_fwd", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(4, 4)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "8", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "hybridsequential16_conv0_tanh_fwd", 
+      "attrs": {"act_type": "tanh"}, 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "Pooling", 
+      "name": "hybridsequential16_pool0_fwd", 
+      "attrs": {
+        "global_pool": "False", 
+        "kernel": "(2, 2)", 
+        "layout": "NCHW", 
+        "pad": "(0, 0)", 
+        "pool_type": "max", 
+        "pooling_convention": "valid", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[4, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "hybridsequential16_dense0_weight", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(16, 0)", 
+        "__storage_type__": "0", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "hybridsequential16_dense0_bias", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__init__": "zeros", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(16,)", 
+        "__storage_type__": "0", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "hybridsequential16_dense0_fwd", 
+      "attrs": {
+        "flatten": "True", 
+        "no_bias": "False", 
+        "num_hidden": "16"
+      }, 
+      "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "hybridsequential16_dense0_tanh_fwd", 
+      "attrs": {"act_type": "tanh"}, 
+      "inputs": [[8, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "hybridsequential16_dense1_weight", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(10, 0)", 
+        "__storage_type__": "0", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "hybridsequential16_dense1_bias", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__init__": "zeros", 
+        "__lr_mult__": "1.0", 
+        "__shape__": "(10,)", 
+        "__storage_type__": "0", 
+        "__wd_mult__": "1.0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "hybridsequential16_dense1_fwd", 
+      "attrs": {
+        "flatten": "True", 
+        "no_bias": "False", 
+        "num_hidden": "10"
+      }, 
+      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "hybridsequential16_dense1_tanh_fwd", 
+      "attrs": {"act_type": "tanh"}, 
+      "inputs": [[12, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [0, 1, 2, 6, 7, 10, 11], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14
+  ], 
+  "heads": [[13, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10600]}
+}
